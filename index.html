@@ -1,0 +1,80 @@
+<html>/////**Sorry i don't have enough time to finish this code but essentially///
+/// it creates a comment box for a basic survey and would send it surverside if i had more time**///
+  <head>
+    <meta charset="utf-8">
+	<meta name="description" content="the Reasons you should ">
+    <title>Peter's React script.</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+  
+    <script type="text/jsx">
+		var Comment=React.createClass({ 
+		rawMarkup:function() {
+			var md = new Remarkable()
+			var rawMarkup=md.render(this.props.children.toString());
+			return {__html: rawMarkup};
+		},
+		render function(){
+			<div class name="comment">
+			<h2 class name ="commentAuthor">
+				{this.props.author}
+			</h2>
+				<span dangourouslySetInnerHTML={this.rawMarkup()}/>
+			</div>
+		});
+		var FilteredReasons=React.createClass ({
+			filterReasons: function (event){
+				var updatedReasons= this.state.initialItems;
+				updatedReasons=updatedReasons.filter(function(item)){
+				return item.toLowercase()!==-1;
+			});
+			this.setState({items:updatedReasons})
+		};
+			getInitialState:function(){
+				return{
+				initialItems:[
+				"Reliable"
+				"Hardworking"
+				"Intelligent"
+				"affordable"
+				"no sensse of design"]
+				},
+			};
+		var PresetQuestionList
+			filterQuestions; function (event){
+				var updateQuestions=this.state.initialQuestions;
+				updateQuestions=updateQuestions.filter(function(item)){
+				return item.toLowercase() !==-1;}
+			};
+		var CustomInput
+			CustomInput=input;
+			getInitialState: function (){
+				return{
+				initialQuestions:[
+				"what can you do?"
+				"how can you help me with my work?"
+				"how serious are you"
+				]
+				}
+			};
+		
+		<table align="center">
+	</script>
+	<div id="mount-point"></div>
+			<tr color="black">asdfasdfsadf</tr>
+			<tr color="black"> food</tr>
+			<tr> Locations</tr>
+			<tr> attractions </tr>
+			<tr> Activities</tr>
+		</table>
+		<h1 color="black"> Adventures </h1>
+			<p color="black"> There are several location in Santa Barabra which offer a unique and exciting activities apealing to all kinds of people</p>
+		</body>
+</html>
